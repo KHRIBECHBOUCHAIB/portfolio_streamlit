@@ -65,7 +65,7 @@ a:hover {
 }
 
 .footer {
-    background-color: #5c6276; /* Blue background for footer */
+    background-color: #3d4358; /* Blue background for footer */
     padding: 10px;
     color: white;
     text-align: center; /* Center align footer text */
@@ -73,7 +73,7 @@ a:hover {
 
 /* Style the header */
 .header {
-    background-color: #4d5257;
+    background-color: #3d4358;
     padding: 0rem 0;
     text-align: center;
     color: #f7f7f8;

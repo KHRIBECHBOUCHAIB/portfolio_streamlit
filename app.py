@@ -201,7 +201,7 @@ Intéressé par une collaboration? Explorez comment mes compétences et mon exp�
     # Bouton de téléchargement du CV
     with open("cv_khribech_bouchaib.pdf", "rb") as file:
         st.download_button(
-            label="Télécharger le CV",
+            label="Télécharger mon CV",
             data=file,
             file_name="cv_khribech_bouchaib.pdf",
             mime="application/pdf",
@@ -219,7 +219,7 @@ def contact():
     # Add a header
     header()
 
-    st.title("Contactez-Moi")
+
 
     # Contact form
     st.markdown("""
