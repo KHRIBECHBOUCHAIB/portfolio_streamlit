@@ -1,11 +1,11 @@
-/* style.css */
 body {
     background-color: #e6f2ff; /* Light blue background */
+    font-family: Arial, sans-serif;
+    font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: #0056b3; /* Darker blue for headings */
-    font-family: Arial, sans-serif;
 }
 
 .stButton>button {
@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 24px;
     margin: 10px 0px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition effect on hover */
 }
 
 .stButton>button:hover {
@@ -24,25 +25,65 @@ h1, h2, h3, h4, h5, h6 {
 
 .stTextInput>div>div>input {
     border-radius: 20px;
+    padding: 10px;
+    border: 2px solid #ced4da; /* Add border */
+    font-size: 18px;
+}
+
+.stTextInput>div>div>input:focus {
+    border-color: #007bff; /* Change border color on focus */
 }
 
 .stSelectbox>div>div>select {
     border-radius: 20px;
+    padding: 10px;
+    border: 2px solid #ced4da; /* Add border */
+    font-size: 18px;
 }
 
-.stRadio>div>div>label>span {
-    background-color: #e6f2ff; /* Matching the body background for a seamless look */
-    border-radius: 20px;
+.stSelectbox>div>div>select:focus {
+    border-color: #007bff; /* Change border color on focus */
 }
 
 a {
     color: #007bff; /* Links color */
+    transition: color 0.3s ease; /* Add transition effect on hover */
 }
 
 a:hover {
     color: #0056b3;
 }
 
-.stDownloadButton>button {
+.sidebar .sidebar-content {
+    background-color: #f8f9fa; /* Light gray background for sidebar */
+    padding: 20px;
+    border-right: 1px solid #dee2e6; /* Border between sidebar and main content */
+}
+
+.sidebar .sidebar-content h3 {
+    margin-top: 0; /* Remove top margin for sidebar title */
+}
+
+.footer {
+    background-color: #5c6276; /* Blue background for footer */
+    padding: 10px;
+    color: white;
+    text-align: center; /* Center align footer text */
+}
+
+/* Style the header */
+.header {
+    background-color: #4d5257;
+    padding: 0rem 0;
+    text-align: center;
+    color: #f7f7f8;
+    font-size: 2.5rem;
     font-weight: bold;
+    margin-bottom: 3rem;
+    box-shadow: 10px 3px 200px rgba(135, 130, 160, 0.16);
+}
+
+/* Adjust the top margin of the first element after the header */
+.header + * {
+    margin-top: 3rem;
 }
