@@ -107,7 +107,13 @@ a:hover {
     padding-bottom: 3rem;
 }
 
-/* Add some rounded corners to elements */
-.rounded {
-    border-radius: 0.25rem;
+.custom-download-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-download-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

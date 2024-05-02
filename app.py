@@ -9,14 +9,15 @@ def local_css(file_name):
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 def header():
-    st.markdown("""
-    <header class="header">
+    header_html = """
+    <header class="header" style="background-image: url('https://www.thewowstyle.com/beautiful-nature-images-free-to-download/'); background-size: cover; background-position: center;">
         <div class="content has-text-centered">
             <h1>Bienvenue sur mon portfolio professionnel</h1>
             <p>Découvrez mes projets et mes compétences en data science et en développement.</p>
         </div>
     </header>
-    """, unsafe_allow_html=True)
+    """
+    st.write(header_html, unsafe_allow_html=True)
 
 
 # Footer function
@@ -52,7 +53,7 @@ def accueil():
 
     # Introduction
     st.markdown("""
-    ### 🌟 À propos de Moi
+    ### À propos de Moi
     En tant qu'enthousiaste des données, je apporte une perspective unique au domaine de la science des données, grâce à mes 15 ans d'expérience en science forensique. Ma transition vers l'informatique m'a permis d'explorer une variété de technologies, notamment Python, PySpark, Java, SQL et des outils de visualisation de données. J'ai développé un intérêt particulier pour l'apprentissage automatique et j'ai utilisé Power BI et Azure Machine Learning pour raconter des histoires convaincantes avec des données.
 
     Ma passion pour l'innovation se concentre particulièrement sur les domaines de la santé et de la psychologie, où je m'efforce d'améliorer l'expérience utilisateur des produits qui ont un impact sur la vie des gens. Dans mon rôle actuel de scientifique et d'analyste de données, je travaille avec des données psychologiques et je développe des interfaces conviviales pour des produits psychologiques. J'ai contribué à la modernisation des plateformes de diagnostic, au développement de chatbots utilisant l'IA, à la création de questionnaires en ligne et au développement de modèles d'apprentissage automatique et d'apprentissage en profondeur pour analyser et interpréter les données des patients.
@@ -75,7 +76,7 @@ def competences():
 
     # Skills section
     st.markdown("""
-    ### 💻 Compétences Techniques
+    ### Compétences Techniques
     - **Programmation** : Python, Java, SQL, HTML/CSS
     - **Data Science** : Pandas, NumPy, Matplotlib, Scikit-Learn, TensorFlow, PyTorch
     - **Big Data** : PySpark, Hadoop
@@ -86,7 +87,7 @@ def competences():
 
     # Soft skills section
     st.markdown("""
-    ### 💪 Soft Skills
+    ###  Soft Skills
     - **Rigueur** : Mon expérience en sciences forensiques m'a appris à être rigoureux et à prêter attention aux détails.
     - **Créativité** : J'aime trouver des solutions innovantes aux problèmes complexes.
     - **Travail d'équipe** : Je suis un joueur d'équipe et je crois en la collaboration pour atteindre les objectifs communs.
@@ -200,30 +201,44 @@ def cv():
 
 
 
-    # Introduction ou résumé
+def cv():
+    local_css("style.css")  # Apply the CSS
+
+    # Add a header
+    header()
+
+    # Introduction or summary
     st.markdown("""
-    ### Mon Curriculum Vitae
-   Spécialiste en science des données et en analyse, j'ai développé des compétences avancées en apprentissage automatique, analyse de données, et développement de logiciels à travers divers secteurs industriels. Mon expertise me permet d'apporter des solutions innovantes et efficaces aux défis technologiques actuels.
+    <div class="content">
+        <h2>Mon Curriculum Vitae</h2>
+        <p>Spécialiste en science des données et en analyse, j'ai développé des compétences avancées en apprentissage automatique, analyse de données, et développement de logiciels à travers divers secteurs industriels. Mon expertise me permet d'apporter des solutions innovantes et efficaces aux défis technologiques actuels.</p>
+        <p>Je suis passionné par l'impact transformateur de la technologie et je cherche constamment à appliquer mes connaissances pour aider les entreprises à atteindre leurs objectifs stratégiques. Pour une vue complète de mon parcours professionnel et de mes compétences, je vous invite à télécharger mon CV.</p>
+        <p>Intéressé par une collaboration? Explorez comment mes compétences et mon expérience pourraient bénéficier à votre projet ou organisation.</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-Je suis passionné par l'impact transformateur de la technologie et je cherche constamment à appliquer mes connaissances pour aider les entreprises à atteindre leurs objectifs stratégiques. Pour une vue complète de mon parcours professionnel et de mes compétences, je vous invite à télécharger mon CV.
+    # Centering the download button using inline HTML for aesthetics
+    st.markdown("<div style='text-align: center;'></div>", unsafe_allow_html=True)
 
-Intéressé par une collaboration? Explorez comment mes compétences et mon expérience pourraient bénéficier à votre projet ou organisation.
-    """)
+    # Open the file here and keep it open for the download button
+    file = open("cv_khribech_bouchaib.pdf", "rb")
+    st.download_button(
+        label="Télécharger mon CV",
+        data=file,
+        file_name="cv_khribech_bouchaib.pdf",
+        mime="application/pdf",
+        key="download-cv"
+    )
+    file.close()  # Close the file after the button
 
-    # Bouton de téléchargement du CV
-    with open("cv_khribech_bouchaib.pdf", "rb") as file:
-        st.download_button(
-            label="Télécharger mon CV",
-            data=file,
-            file_name="cv_khribech_bouchaib.pdf",
-            mime="application/pdf",
-        )
+    # Add some space
+    st.markdown("<br>", unsafe_allow_html=True)
 
     # Add a footer
     footer()
-    
-import streamlit as st
 
+
+    
 def contact():
     # Add your CSS
     local_css("style.css")
@@ -231,31 +246,36 @@ def contact():
     # Add a header
     header()
 
+    # Contact form header with enhanced styling
+    st.markdown("### Remplissez le formulaire")
+    st.markdown("Veuillez entrer vos informations dans les champs ci-dessous pour me contacter.")
 
+    # Form fields with clear labeling
+    with st.form(key='contact_form'):
+        name = st.text_input("Nom et prénoms", placeholder="Entrez votre nom complet")
+        country = st.text_input("Pays", placeholder="Entrez votre pays")
+        entreprise = st.text_input("Entreprise", placeholder="Nom de votre entreprise")
+        email = st.text_input("Email", placeholder="exemple@domaine.com")
+        message = st.text_area("Message", placeholder="Écrivez votre message ici...", height=150)
 
-    # Contact form
-    st.markdown("""
-    ### 📧 Remplissez le formulaire : 
-    """)
+        # Submit button
+        submit_button = st.form_submit_button("Envoyer")
 
-    # Form fields
-    name = st.text_input("Nom")
-    email = st.text_input("Email")
-    message = st.text_area("Message")
-
-    # Submit button
-    if st.button("Envoyer"):
+    if submit_button:
         import requests
         data = {
             "name": name,
+            "pays": country,
             "email": email,
+            "entreprise": entreprise,
             "message": message
         }
+        # Simulating POST request for demonstration (replace URL with your actual endpoint)
         response = requests.post("https://formspree.io/f/xjvnlyqz", data=data)
         if response.ok:
-            st.markdown(" Votre message a été envoyé avec succès !")
+            st.success("Votre message a été envoyé avec succès !")
         else:
-            st.markdown(" Erreur lors de l'envoi du message. Veuillez réessayer.")
+            st.error("Erreur lors de l'envoi du message. Veuillez réessayer.")
 
     # Add a footer
     footer()
