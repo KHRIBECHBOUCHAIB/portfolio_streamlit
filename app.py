@@ -246,19 +246,23 @@ def contact():
             st.markdown(" Erreur lors de l'envoi du message. Veuillez réessayer.")
 
     st.markdown("""
-    ### 🌐 Les réseaux sociaux : 
+    ### 🌐 Les réseaux sociaux :
     """)
-    # Add social media links as buttons
-    col1, col2, col3 = st.columns(3)
+
+    # Create columns for the social media buttons with deliberate spacing
+    col1, col2, col3, col4, col5 = st.columns([1, 0.5, 1, 0.5, 1])
+
     with col1:
-      if st.button("LinkedIn"):
-        webbrowser.open_new_tab("https://www.linkedin.com/in/khbouchaib/")
-    with col2:
-      if st.button("GitHub"):
-        webbrowser.open_new_tab("https://github.com/KHRIBECHBOUCHAIB")
-    with col3:
-      if st.button("Twitter"):
-        webbrowser.open_new_tab("https://twitter.com/bouchaib_k")
+        st.markdown(
+            """<a href="https://www.linkedin.com/in/khbouchaib/" target="_blank">
+            LinkedIn</button></a>""",
+            unsafe_allow_html=True)
+
+    with col5:
+        st.markdown(
+            """<a href="https://github.com/KHRIBECHBOUCHAIB" target="_blank">
+            GitHub</button></a>""",
+            unsafe_allow_html=True)
 
     # Add a footer
     footer()

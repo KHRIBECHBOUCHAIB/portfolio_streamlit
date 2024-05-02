@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #0056b3; /* Darker blue for headings */
 }
 
-.stButton>button {
+.stButton > button {
     border: 2px solid #007bff; /* Bootstrap primary blue */
     border-radius: 5px;
     color: white;
@@ -19,30 +19,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: background-color 0.3s ease; /* Add transition effect on hover */
 }
 
-.stButton>button:hover {
+.stButton > button:hover {
     background-color: #0056b3; /* Slightly darker blue on hover */
-}
-
-.stTextInput>div>div>input {
-    border-radius: 20px;
-    padding: 10px;
-    border: 2px solid #ced4da; /* Add border */
-    font-size: 18px;
-}
-
-.stTextInput>div>div>input:focus {
-    border-color: #007bff; /* Change border color on focus */
-}
-
-.stSelectbox>div>div>select {
-    border-radius: 20px;
-    padding: 10px;
-    border: 2px solid #ced4da; /* Add border */
-    font-size: 18px;
-}
-
-.stSelectbox>div>div>select:focus {
-    border-color: #007bff; /* Change border color on focus */
 }
 
 a {
