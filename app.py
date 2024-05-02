@@ -8,9 +8,16 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-# Header function
 def header():
-    st.markdown('<p class="header">Bienvenue sur mon portfolio professionnel</p>', unsafe_allow_html=True)
+    st.markdown("""
+    <header class="header">
+        <div class="content has-text-centered">
+            <h1>Bienvenue sur mon portfolio professionnel</h1>
+            <p>Découvrez mes projets et mes compétences en data science et en développement.</p>
+        </div>
+    </header>
+    """, unsafe_allow_html=True)
+
 
 # Footer function
 def footer():
@@ -18,11 +25,16 @@ def footer():
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                by <a href="https://www.linkedin.com/in/khbouchaib/" target="_blank">Khribech Bouchaib</a>. Tous droits réservés © 2024.
+                © 2024 Khribech Bouchaib. Tous droits réservés.
+                <br>
+                <a href="https://www.linkedin.com/in/khbouchaib/" target="_blank">LinkedIn</a>
+                &middot;
+                <a href="https://github.com/KHRIBECHBOUCHAIB" target="_blank">GitHub</a>
             </p>
         </div>
     </footer>
     """, unsafe_allow_html=True)
+
 
 # Home page
 def accueil():
@@ -244,25 +256,6 @@ def contact():
             st.markdown(" Votre message a été envoyé avec succès !")
         else:
             st.markdown(" Erreur lors de l'envoi du message. Veuillez réessayer.")
-
-    st.markdown("""
-    ### 🌐 Les réseaux sociaux :
-    """)
-
-    # Create columns for the social media buttons with deliberate spacing
-    col1, col2, col3, col4, col5 = st.columns([1, 0.5, 1, 0.5, 1])
-
-    with col1:
-        st.markdown(
-            """<a href="https://www.linkedin.com/in/khbouchaib/" target="_blank">
-            LinkedIn</button></a>""",
-            unsafe_allow_html=True)
-
-    with col5:
-        st.markdown(
-            """<a href="https://github.com/KHRIBECHBOUCHAIB" target="_blank">
-            GitHub</button></a>""",
-            unsafe_allow_html=True)
 
     # Add a footer
     footer()
