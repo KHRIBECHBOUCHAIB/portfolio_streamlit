@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stButton > button:hover {
-    background-color: #0056b3; /* Slightly darker blue on hover */
+    background-color: #2700b3; /* Slightly darker blue on hover */
 }
 
 a {
@@ -48,7 +48,7 @@ a:hover {
 }
 
 .footer {
-    background-color: #3d4358; /* Blue background for footer */
+    background-color: #050816; /* Blue background for footer */
     padding: 10px;
     color: white;
     text-align: center; /* Center align footer text */
@@ -57,7 +57,7 @@ a:hover {
 
 /* Style the header */
 .header {
-    background-color: #3d4358;
+    background-color: #050816;
     padding: 2rem 0;
     text-align: center;
     color: #f7f7f8;
