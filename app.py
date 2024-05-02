@@ -279,6 +279,48 @@ def contact():
 
     # Add a footer
     footer()
+    
+from PIL import Image
+
+def gallery():
+
+    # Add your CSS
+    local_css("style.css")
+
+    # Add a header
+    header()
+
+    st.header("Gallery")
+    st.write("Voici quelques-unes de mes photos préférées de mes passe-temps")
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        image = Image.open("images/image6.jpg")
+        image = image.resize((250, 400))
+        st.image(image)
+    with col2:
+        image = Image.open("images/image5.jpg")
+        image = image.resize((250, 400))
+        st.image(image)
+    with col3:
+        image = Image.open("images/image4.jpg")
+        image = image.resize((250, 400))
+        st.image(image)
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        image = Image.open("images/image2.jpg")
+        image = image.resize((500, 400))
+        st.image(image)
+    with col2:
+        image = Image.open("images/image3.jpg")
+        image = image.resize((500, 400))
+        st.image(image)
+        
+# Add a footer
+    footer()
+ 
+
 
 # Navigation
 # Appliquer le CSS globalement
@@ -293,7 +335,8 @@ options_nav = {
     "Compétences": "Compétences",
     "Projets": "Projets",
     "CV": "Curriculum vitæ",
-    "Contact": "Contact"
+    "Contact": "Contact",
+    "Photos": "Photos"
 }
 
 # Création des options de navigation dans la sidebar
@@ -310,3 +353,5 @@ elif selected_page == "CV":
     cv()
 elif selected_page == "Contact":
     contact()
+elif selected_page == "Photos":
+    gallery()

@@ -117,3 +117,8 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+.image-frame {
+    border: 5px solid black;
+    padding: 5px;
+    margin: 5px;
+}
