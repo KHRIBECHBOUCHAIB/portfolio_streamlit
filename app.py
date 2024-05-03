@@ -44,13 +44,6 @@ def accueil():
     # Add a header
     header()
 
-    # Afficher le logo
-    logo_path = 'images/image1.jpg'
-
-    col1, col2, col3 = st.columns([6, 9, 2])
-    with col2:
-        st.image(logo_path, width=200)
-
     # Introduction
     st.markdown("""
     ### À propos de Moi
@@ -65,8 +58,16 @@ def accueil():
     Dans mon temps libre, j'aime faire du kitesurf et trouver un équilibre en dehors du monde numérique. Je suis toujours à la recherche d'opportunités pour combiner mes passions pour les données et l'humanité afin de découvrir de nouveaux insights et de stimuler l'innovation.
     """)
 
+ # Afficher le logo
+    logo_path = 'images/image1.jpg'
+
+    col1, col2, col3 = st.columns([6, 9, 2])
+    with col2:
+        st.image(logo_path, width=200)
     # Add a footer
     footer()
+    
+    
 # Skills page
 def competences():
     local_css("style.css")  # Appliquer le CSS
