@@ -290,7 +290,6 @@ def gallery():
     # Add a header
     header()
 
-    st.header("Gallery")
     st.write("Voici quelques-unes de mes photos préférées de mes passe-temps")
 
     col1, col2, col3 = st.columns(3)
