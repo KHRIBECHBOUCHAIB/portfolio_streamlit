@@ -10,7 +10,7 @@ def local_css(file_name):
 
 def header():
     header_html = """
-    <header class="header" style="background-image: url('https://www.thewowstyle.com/beautiful-nature-images-free-to-download/'); background-size: cover; background-position: center;">
+    <header class="header">
         <div class="content has-text-centered">
             <h1>Bienvenue sur mon portfolio professionnel</h1>
             <p>Découvrez mes projets et mes compétences en data science et en développement.</p>
@@ -18,6 +18,7 @@ def header():
     </header>
     """
     st.write(header_html, unsafe_allow_html=True)
+
 
 
 # Footer function

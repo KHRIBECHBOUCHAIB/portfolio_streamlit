@@ -21,7 +21,9 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     transition: background-color 0.3s ease; /* Add transition effect on hover */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 7px 8px rgba(245, 213, 6, 0.5);
 }
+
 
 .stButton > button:hover {
     background-color: #2700b3; /* Slightly darker blue on hover */
@@ -40,8 +42,9 @@ a:hover {
     background-color: #f8f9fa; /* Light gray background for sidebar */
     padding: 20px;
     border-right: 1px solid #dee2e6; /* Border between sidebar and main content */
-    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 7px 8px rgba(245, 213, 6, 0.5);
 }
+
 
 .sidebar .sidebar-content h3 {
     margin-top: 0; /* Remove top margin for sidebar title */
@@ -52,7 +55,7 @@ a:hover {
     padding: 10px;
     color: white;
     text-align: center; /* Center align footer text */
-    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 7px 8px rgba(245, 213, 6, 0.5);
 }
 
 /* Style the header */
@@ -64,8 +67,9 @@ a:hover {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 3rem;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 7px 8px rgba(245, 213, 6, 0.5);
 }
+
 
 /* Adjust the top margin of the first element after the header */
 .header + * {
@@ -111,14 +115,10 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 6px 7px 8px rgba(245, 213, 6, 0.5);
 }
 .custom-download-button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.image-frame {
-    border: 5px solid black;
-    padding: 5px;
-    margin: 5px;
 }
